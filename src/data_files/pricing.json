@@ -34,5 +34,20 @@
     ],
     "purchaseBtnTitle": "Get the Professional Toolbox",
     "purchaseLink": "#"
+  },
+
+  "customKit": {
+    "name": "Custom Kit",
+    "description": "Best option for DIY projects",
+    "price": "49",
+    "cents": ".00",
+    "billingFrequency": "USD / monthly",
+    "features": [
+      "Key hardware tools",
+      "Access to guides & tutorials",
+      "Standard support"
+    ],
+    "purchaseBtnTitle": "Get the Custom Kit",
+    "purchaseLink": "#"
   }
 }

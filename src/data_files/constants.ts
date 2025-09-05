@@ -3,12 +3,12 @@ import ogImageSrc from "@images/social.png";
 
 
 export const SITE = {
-  title: "ScrewFast",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  title: "Cybercraft Labs Pvt Ltd",
+  tagline: "Top-quality Software Development and Cybersecurity Services",
+  description: "Cybercraft Labs is a pioneering company specializing in secure Software Development and Cybersecurity services.",
+  description_short: "Cybercraft Labs is a pioneering company specializing in secure Software Development and Cybersecurity services.",
+  url: "https://cybercraftlabs.org",
+  author: "Gaurav Raj (@thehackersbrain)",
 };
 
 export const SEO = {
@@ -35,8 +35,8 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}: : Cybersecurity and Software Development Services`,
+  description: "Equip your projects with Cybercraft Labs' top-quality software development and cybersecurity services. Trusted by industry leaders, Cybercraft Labs offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
   image: ogImageSrc,
 };
 
