@@ -216,6 +216,9 @@
   /* new */
   --color-background-dark: oklch(0.2305 0.0041 264.49);
   --color-primary-blue: oklch(0.6582 0.169 248.81);
+  --color-pure-dark: oklch(0.2053 0.0081 274.52);
+  --color-less-pure-dark: oklch(0.2357 0.0078 274.61);
+  --color-least-pure-dark: oklch(0.276 0.0062 258.36);
 
   /* Semantic Color Aliases */
   /* --color-neutral-50: var(--color-seasalt-50);
