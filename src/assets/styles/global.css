@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'preline/variants.css';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @plugin '@tailwindcss/forms';
 
 @custom-variant dark (&:is(.dark *));
@@ -232,6 +233,9 @@
   --color-neutral-800: var(--color-eerie-black-500);
   --color-neutral-900: var(--color-eerie-black-400);
   --color-neutral-950: var(--color-eerie-black-200); */
+
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-exo: 'Exo', sans-serif;
 }
 
 /*
