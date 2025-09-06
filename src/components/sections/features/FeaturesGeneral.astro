@@ -1,6 +1,5 @@
 ---
 // Import the necessary dependencies
-import { Image } from "astro:assets";
 import IconBlock from "@components/ui/blocks/IconBlock.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
@@ -24,21 +23,30 @@ const { title, subTitle, src, alt, features } = Astro.props;
 <section
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
-  <!-- Block to display the feature image -->
-  <div class="relative mb-6 overflow-hidden md:mb-8">
-    {
-      src && alt && (
-        <Image
-          src={src}
-          alt={alt}
-          class="h-full w-full object-cover object-center"
-          draggable={"false"}
-          format={"avif"}
-          loading={"eager"}
-        />
-      )
-    }
+<div class="relative mb-6 overflow-hidden md:mb-8">
+  <div class="mt-8 mb-24 flex gap-10 justify-center">
+    <div class="relative border-8 h-[500px] w-[250px] border-least-pure-dark bg-[url(/aimage1.jpg)] bg-cover bg-center text-white flex justify-center items-end">
+      <div class="absolute inset-0 bg-pure-dark/50"></div>
+      <h2 class="mb-24 relative z-10 font-poppins font-bold text-2xl text-white/50">Innovation</h2>
+    </div>
+
+    <div class="mt-4 lg:mt-10 relative border-8 h-[500px] w-[250px] border-least-pure-dark bg-[url(/aimage2.jpg)] bg-cover bg-center text-white flex justify-center items-end">
+      <div class="absolute inset-0 bg-pure-dark/50"></div>
+      <h2 class="mb-24 relative z-10 font-poppins font-bold text-2xl text-white/50">Simplicity</h2>
+    </div>
+
+    <div class="relative border-8 h-[500px] w-[250px] border-least-pure-dark bg-[url(/aimage3.jpg)] bg-cover bg-center text-white flex justify-center items-end">
+      <div class="absolute inset-0 bg-pure-dark/50"></div>
+      <h2 class="mb-24 relative z-10 font-poppins font-bold text-2xl text-white/50">Creativity</h2>
+    </div>
+
+    <div class="mt-4 lg:mt-10 relative border-8 h-[500px] w-[250px] border-least-pure-dark bg-[url(/aimage4.jpg)] bg-cover bg-center text-white flex justify-center items-end">
+      <div class="absolute inset-0 bg-pure-dark/50"></div>
+      <h2 class="mb-24 relative z-10 font-poppins font-bold text-2xl text-white/50">Collaboration</h2>
+    </div>
   </div>
+</div>
+
 
   <!-- Displaying the main content consisting of title, subtitle, and several `IconBlock` components -->
   <div class="mt-5 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-12">
