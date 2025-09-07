@@ -28,7 +28,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
     class="relative mx-2 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 px-4 py-3 backdrop-blur-md dark:border-neutral-700/40 dark:bg-less-pure-dark/80 dark:backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto"
     aria-label="Global"
   >
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between md:my-3 lg:my-3 xl:my-3">
       <!-- Brand logo -->
       <a
         class="flex-none rounded-lg text-xl font-bold outline-hidden ring-zinc-500 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden"
@@ -36,7 +36,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         aria-label="Brand"
       >
         <!-- <BrandLogo class="h-auto w-24" /> -->
-        <Image src={brandIcon} alt="Cybercraft Labs Logo" class="h-auto w-13"/>
+        <Image src={brandIcon} alt="Cybercraft Labs Logo" class="h-auto w-13" loading="lazy"/>
       </a>
       <!-- Collapse toggle for smaller screens -->
       <div class="ml-auto mr-5 md:hidden">
@@ -97,7 +97,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
           <NavLink url={link.url} name={link.name} />
         ))}
 
-        <Authentication />
+        <!-- <Authentication /> -->
         <LanguagePicker />
         <!-- ThemeIcon component specifically for larger screens -->
         <span class="hidden md:inline-block">
