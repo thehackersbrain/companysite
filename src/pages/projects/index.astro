@@ -90,53 +90,65 @@ const ogTitle = "Hardware Tools | ScrewFast";
   }}
 >
   <div
-    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+    class="mx-auto w-full max-w-(--breakpoint-2xl) flex-grow px-4 sm:px-6 lg:px-8"
   >
-    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-      <div class="flex items-center gap-12">
-        <h1
-          class="text-2xl font-bold tracking-tight text-balance text-neutral-800 md:text-4xl md:leading-tight dark:text-neutral-200"
-        >
-          {title}
-        </h1>
-        {
-          subTitle && (
-            <p class="hidden max-w-(--breakpoint-sm) text-pretty text-neutral-600 md:block dark:text-neutral-400">
-              {subTitle}
-            </p>
-          )
-        }
-      </div>
-      <PrimaryCTA title="Customer Stories" url="#testimonials" noArrow={true} />
-    </div>
-    {/* Displaying products in alternating styles. Alternative product gets different card styling.
-    Maps through all product entries and displays them with either CardSmall or CardWide based on their position. */}
-    <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-      {
-        product.map((product, index) => {
-          const position = index % 4;
-          if (position === 0 || position === 3) {
-            return <CardSmall product={product} />;
-          } else {
-            return <CardWide product={product} />;
+    <div
+      class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+    >
+      <div
+        class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12"
+      >
+        <div class="flex items-center gap-12">
+          <h1
+            class="text-2xl font-bold tracking-tight text-balance text-neutral-800 md:text-4xl md:leading-tight dark:text-neutral-200"
+          >
+            {title}
+          </h1>
+          {
+            subTitle && (
+              <p class="hidden max-w-(--breakpoint-sm) text-pretty text-neutral-600 md:block dark:text-neutral-400">
+                {subTitle}
+              </p>
+            )
           }
-        })
+        </div>
+        <PrimaryCTA
+          title="Customer Stories"
+          url="#testimonials"
+          noArrow={true}
+        />
+      </div>
+      {
+        /* Displaying products in alternating styles. Alternative product gets different card styling.
+    Maps through all product entries and displays them with either CardSmall or CardWide based on their position. */
       }
-    </section>
+      <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+        {
+          product.map((product, index) => {
+            const position = index % 4;
+            if (position === 0 || position === 3) {
+              return <CardSmall product={product} />;
+            } else {
+              return <CardWide product={product} />;
+            }
+          })
+        }
+      </section>
+    </div>
+    {/* Features statistics section */}
+    <FeaturesStatsAlt
+      title="Why Choose Cybercraft Labs?"
+      subTitle="Transform your ideas into tangible results with Cybercraft Labs tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
+      benefits={[
+        "Robust and reliable tools for long-lasting performance.",
+        "Innovative solutions tailored to modern construction needs.",
+        "Customer support dedicated to your project's success.",
+      ]}
+    />
+    {/* Testimonials section */}
+    <TestimonialsSectionAlt
+      title="What Our Customers Say"
+      testimonials={testimonials}
+    />
   </div>
-  {/* Features statistics section */}
-  <FeaturesStatsAlt
-    title="Why Choose Cybercraft Labs?"
-    subTitle="Transform your ideas into tangible results with Cybercraft Labs tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
-    benefits={[
-      "Robust and reliable tools for long-lasting performance.",
-      "Innovative solutions tailored to modern construction needs.",
-      "Customer support dedicated to your project's success.",
-    ]}
-  />
-  {/* Testimonials section */}
-  <TestimonialsSectionAlt
-    title="What Our Customers Say"
-    testimonials={testimonials}
-  />
 </MainLayout>
